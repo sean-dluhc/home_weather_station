@@ -1,4 +1,5 @@
 import socket
+from get_weather_data import get_data 
 
 
 # Define socket host and port
@@ -36,7 +37,7 @@ def send_response(html, client_connection):
     
 
 def generate_html():
-    html_content = """
+    html_content = f"""
                 <!DOCTYPE html>
                 <html>
                 <head>
@@ -44,7 +45,7 @@ def generate_html():
                 <meta http-equiv="refresh" content="10">
                 </head>
                 <body>
-                <p> blubber</p>
+                <p>{get_data()}r</p>
                 </body>
                 </html>
                 """.encode('utf-8')
