@@ -3,7 +3,7 @@ from get_weather_data import get_data
 
 
 # Define socket host and port
-SERVER_HOST = socket.gethostbyname(socket.gethostname())
+SERVER_HOST = '192.168.68.118'
 SERVER_PORT = 8000
 print(SERVER_HOST)
 
@@ -46,7 +46,7 @@ def generate_html():
                 <meta http-equiv="refresh" content="10">
                 </head>
                 <body>
-                <p>{get_data()}r</p>
+                <p>{get_data()}</p>
                 </body>
                 </html>
                 """.encode('utf-8')
